@@ -1,18 +1,59 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
+# Temporary folders #
+#####################
+fsh-generated
+temp
+template
+output
 
-# Other files and folders
-.settings/
+# Ignore large files and frequently changed files in input-cache #
+##################################################################
+input-cache/org.hl7.fhir.publisher.jar
+input-cache/publisher.jar
+input-cache/schemas/
+# input-cache/txcache/
 
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
+# OS generated files #
+######################
+Thumbs.db
+.DS_Store
+.DS_Store?
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+# backup files #
+################
+*.bak
+
+# IDE generated files #
+#######################
+.vscode
+.idea
+
+# Microsoft Office temp files #
+###############################
+~$*.xlsx
+input-cache/txcache/all-systems.cache
+input-cache/txcache/http___cancerstaging.org.cache
+input-cache/txcache/http___varnomen.hgvs.org.cache
+input-cache/txcache/http___www.genenames.org.cache
+input-cache/txcache/http___www.ncbi.nlm.nih.gov_clinvar.cache
+input-cache/txcache/http___www.sequenceontology.org_.cache
+input-cache/txcache/icd-10-cm.cache
+input-cache/txcache/iso3166.cache
+input-cache/txcache/lang.cache
+input-cache/txcache/loinc.cache
+input-cache/txcache/rxnorm.cache
+input-cache/txcache/snomed.cache
+input-cache/txcache/ucum.cache
+input-cache/txcache/umls.cache
+
+# Automated testing
+.classpath
+.project
+.settings/*
+target/*
+.mvn/wrapper/maven-wrapper.jar
+_gencontinuous.bat
+_gencontinuous.sh
+_genonce.bat
+_genonce.sh
+_updatePublisher.bat
+_updatePublisher.sh
