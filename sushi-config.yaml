@@ -15,8 +15,10 @@ releaseLabel: ci-build
 pages:
   index.md:
     title: Home
-  biomarker.md:
-    title: Biomarker
+  cancer_biomarker.md:
+    title: Cancer Biomarker
+  cap_biomarker.md:
+    title: Cancer Biomarker - College of American Pathologists (CAP)
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
