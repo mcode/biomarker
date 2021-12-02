@@ -1,7 +1,8 @@
 /* ***************************************
 
 Initial Logical Model for OmicsKnowledge.
-Problem Statement: The HL7 Genomics Reporting FHIR IG uses an Observation resource for representing diagnostic and therapeutic implications. The phenotype and pharmacogenomics content is however not patient-centric and more accurately represents a knowledge artifact which is more tied to the variant. This content ideally could exist separate from patient-centric data.
+Problem Statement: The HL7 Genomics Reporting FHIR IG uses an Observation resource for representing diagnostic and therapeutic implications. 
+The phenotype and pharmacogenomics content is however not patient-centric and more accurately represents a knowledge artifact which is more tied to the variant. This content ideally could exist separate from patient-centric data.
 After discussion at the HL7 CGWG meeting on 8/24, the group (namely Lloyd) agreed that there is value to trying a first pass at a dedicated resource for genomics "definitional content".
  */
 
