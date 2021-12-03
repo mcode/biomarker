@@ -62,7 +62,8 @@ Unstructured test reports:
 * Caris offers [cancer-specific biomarker tests](https://www.carislifesciences.com/order-a-test/) which aggregate DNA, RNA, and protein tumor marker tests.
 
 
-# References
+#### References
+
 * Orfao, A., Gonzalez, J., Lopez, A., Abad, M., Bouza, P., Cruz, J, Alonso, A., San Miguel, J. (1995). [Flow cytometry in the diagnosis of cancer.](https://pubmed.ncbi.nlm.nih.gov/7652487/) _Scand J Clin Lab Invest Suppl_, 1995;221:145-52. doi: 10.3109/00365519509090577. 
 
 ### Cancer Biomarker Representation
@@ -85,13 +86,14 @@ If we examine clinical genomics in the context of patient sharing for patient sh
 
 For example:
 
+
 | Biomarker Element         | Example value              |
 |---------------------------|----------------------------|
-| Biomarker source | tumor | 
-| Biomarker category | DNA mutation |
-| Biomarker name | KIT |
-| Biomarker result | mutated |
-| Biomarker interpretation | pathogenic | 
+| Biomarker source          | tumor | 
+| Biomarker category        | DNA mutation |
+| Biomarker name            | KIT |
+| Biomarker result          | mutated |
+| Biomarker interpretation  | pathogenic | 
 {: .grid }
 
 
@@ -111,7 +113,6 @@ Indeed, this canonical form generalizable way of passing biomarker information f
 | Biomarker name | INI-1 |
 | Biomarker result | loss |
 | Biomarker interpretation | deficiency |
-
 {: .grid }
 
 
@@ -164,7 +165,6 @@ The pattern of translation is as follows:
 | biomarker-name | ProteinMarkerTest | Observation.code.coding.displayName  |  |
 | biomarker-value | ProteinMarkerTest | Observation.valueCodeableConcept | |
 | biomarker-interpretation | ProteinMarkerTest | Observation.interpretation | |
-
 {: .grid }
 
 
@@ -175,8 +175,8 @@ The pattern of translation is as follows:
 | Biomarker name | INI-1 |
 | Biomarker result | loss |
 | Biomarker interpretation | deficiency |
-
 {: .grid }
+
 
 _Biomarker pattern #1 Example#1:_
 [Estrogen Receptor (ER) status:](Observation-biomarker-estrogen-receptor.html)
@@ -186,8 +186,7 @@ Resulting simplified biomarker representation:
 
 | **biomarker-element**       | **value**        | 
 |-----------------------------|------------------|
-| biomarker-code   |               | 
-
+| biomarker-code   |   | 
 {: .grid }
 
 
@@ -206,13 +205,12 @@ Map from the mCODE CancerGenomicVariant profile if the biomarker of type [DNATum
 The structural data mapping is as follows:
 
 
-| Biomarker Observation element| mCODE Profile Name   | mCODE Element Path        | Comments           |
-|------------------------------|----------------------|---------------------------|--------------------|
-| biomarker-source | TumorMarkerTest    | Specimen.type.coding.displayName | |
+| Biomarker Observation element | mCODE Profile Name   | mCODE Element Path        | Comments           |
+|-------------------------------|----------------------|---------------------------|--------------------|
+| biomarker-source | TumorMarkerTest    | Specimen.type.coding.displayName |  |
 | biomarker-name | CancerGenomicVariant | Observation.component:geneStudied.valueCodeableConcept.display | uses the HGNC symbol rather than the code |
-| biomarker-value | TumorMarkerTest | Observation.valueCodeableConcept | |
+| biomarker-value | TumorMarkerTest | Observation.valueCodeableConcept |  |
 | biomarker-interpretation | CancerGenomicVariant | Observation.component:clinicalSignificance |  |
-
 {: .grid }
 
 
@@ -237,7 +235,6 @@ The structural data mapping is as follows:
 | Biomarker name | KIT |
 | Biomarker result | mutated |
 | Biomarker interpretation | pathogenic | 
-
 {: .grid }
 
 
