@@ -61,11 +61,6 @@ Analysis of the following data feeds:
 Unstructured test reports:
 * Caris offers [cancer-specific biomarker tests](https://www.carislifesciences.com/order-a-test/) which aggregate DNA, RNA, and protein tumor marker tests.
 
-
-#### References
-
-* Orfao, A., Gonzalez, J., Lopez, A., Abad, M., Bouza, P., Cruz, J, Alonso, A., San Miguel, J. (1995). [Flow cytometry in the diagnosis of cancer.](https://pubmed.ncbi.nlm.nih.gov/7652487/) _Scand J Clin Lab Invest Suppl_, 1995;221:145-52. doi: 10.3109/00365519509090577. 
-
 ### Cancer Biomarker Representation
 
 The need for reprsenting biomarkers originated with mCODE™ (the minimal Common Oncology Data Elements). mCODE was conceived of as a lightweight standard that would enable the treatment of every cancer patient to contribute to comparative effectiveness analysis of cancer treatments by allowing for easier methods of data exchange between health systems. Fundamentally, mCODE is a step towards capturing research-quality data from the treatment of all cancer patients.  mCODE benefits from the HL7 FHIR Implementation Guide (HL7 IG) representing a core set of structured data elements for oncology electronic health records (EHRs) which it has inherited. As a result, regarding genomic, and biomarkers in general, the current implementation of mCODE from an -omics standpoint borrows heavily from the [HL7 Genomics Reporting IG](http://hl7.org/fhir/uv/genomics-reporting/index.html).
