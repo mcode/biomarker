@@ -14,9 +14,9 @@ Description:    "The result of a tumor marker test. Tumor marker tests are gener
 // Already MS in US Core Obs Lab: status, category, code, subject, effective[x], value[x], dataAbsentReason
 * specimen MS
 
-Profile:        BiomarkerTestProtein
+Profile:        BiomarkerProtein
 Parent:         Observation
-Id:             biomarker-test-protein
+Id:             biomarker-protein
 Title:          "Biomarker Test - Protein Markers"
 Description:    "The result of a tumor marker test specific for gene expression or surface protein markers. Examples include estrogen receptor"
 * subject 1..1

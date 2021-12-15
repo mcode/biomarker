@@ -153,13 +153,13 @@ Map from the mCODE GenomicVariant profile if the biomarker of type [ProteinMarke
 The pattern of translation is as follows:
 
 
-| Biomarker Observation element| mCODE Profile Name   | mCODE Element Path      | Comments             |
+| Biomarker Observation element| Profile Name   | Biomarker Element Path      | Comments             |
 |------------------------------|----------------------|---------------------------|--------------------|
-| biomarker-source | ProteinMarkerTest    | Specimen.type.coding.displayName | |
-| biomarker-category | ProteinMarkerTest | Observation.category.code | |
-| biomarker-name | ProteinMarkerTest | Observation.code.coding.displayName  |  |
-| biomarker-value | ProteinMarkerTest | Observation.valueCodeableConcept | |
-| biomarker-interpretation | ProteinMarkerTest | Observation.interpretation | |
+| biomarker-source | BiomarkerProtein    | Specimen.type.coding.displayName | |
+| biomarker-category | BiomarkerProtein | Observation.category.code | |
+| biomarker-name | BiomarkerProtein | Observation.code.coding.displayName  |  |
+| biomarker-value | BiomarkerProtein | Observation.valueCodeableConcept | |
+| biomarker-interpretation | BiomarkerProtein | Observation.interpretation | |
 {: .grid }
 
 
@@ -195,14 +195,15 @@ If the biomarker is a protein tumor marker with a result that denotes confirmati
 
 If the biomarker is from a genomics sequencing report, and whose results are represented with detailed variant data represented conformant with bioinformatics standards like HGNC and HGVS.
 
-Map from the mCODE GenomicVariant profile if the biomarker of type [DNATumorMarkerTestVS] was part of a mutational analysis from a genomic sequencing test.
+Map from the GenomicVariant profile if the biomarker of type [DNATumorMarkerTestVS] was part of a mutational analysis from a genomic sequencing test.
 
 The structural data mapping is as follows:
 
 
-| Biomarker Observation element | mCODE Profile Name   | mCODE Element Path        | Comments           |
+| Biomarker Observation element | Profile Name   | Element Path        | Comments           |
 |-------------------------------|----------------------|---------------------------|--------------------|
 | biomarker-source | TumorMarkerTest    | Specimen.type.coding.displayName |  |
+| biomarker category | GenomicVariant | Observation.category | dna-biomarker |
 | biomarker-name | GenomicVariant | Observation.component:geneStudied.valueCodeableConcept.display | uses the HGNC symbol rather than the code |
 | biomarker-value | TumorMarkerTest | Observation.valueCodeableConcept |  |
 | biomarker-interpretation | GenomicVariant | Observation.component:clinicalSignificance |  |
@@ -240,10 +241,10 @@ The structural data mapping is as follows:
 
 A gene made by joining parts of two different genes. Fusion genes, and the fusion proteins that come from them, may be made in the laboratory, or made naturally in the body when part of the DNA from one chromosome moves to another chromosome. (source: [NCI](https://www.cancer.gov/publications/dictionaries/cancer-terms/def/fusion-gene))
 
-The mCODE mapping is as follows:
+The mapping is as follows:
 
 
-| Biomarker Observation element| mCODE Profile Name   | mCODE Element / Path      | Comments           |
+| Biomarker Observation element| Profile Name   | Element / Path      | Comments           |
 |------------------------------|----------------------|---------------------------|--------------------|
 | biomarker source | GenomicSpecimen | Specimen.code | |
 | biomarker category | GenomicVariant | Observation.method | |
