@@ -6,7 +6,7 @@ Id:             biomarker-test
 Title:          "Biomarker Test"
 Description:    "The result of a tumor marker test. Tumor marker tests are generally used to guide treatment decisions and monitor treatment, as well as to predict the chance of recovery and cancer recurrence."
 * subject 1..1
-* code from TumorMarkerTestVS (required)
+* code from TumorMarkerTestVS (extensible)
 // * code obeys tumor-marker-test-code-invariant
 * subject only Reference(Patient)
 * effective[x] only dateTime or Period
@@ -20,7 +20,7 @@ Id:             biomarker-protein
 Title:          "Biomarker Test - Protein Markers"
 Description:    "The result of a tumor marker test specific for gene expression or surface protein markers. Examples include estrogen receptor"
 * subject 1..1
-* code from ProteinMarkerTestVS (required)
+* code from ProteinMarkerTestVS (extensible)
 // * code obeys tumor-marker-test-code-invariant
 * subject only Reference(Patient)
 * effective[x] only dateTime or Period

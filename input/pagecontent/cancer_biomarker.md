@@ -40,8 +40,8 @@ mCODE separated the notion of "tumor markers" and "genomics elements" for pragma
 * genetic DNA tumor markers identified through variants from genomic sequencing tests. For example:
     * 
 
-* genetic DNA tumor markers identified through reference labs as point mutation tests. For example:
-    * 
+* genetic DNA tumor markers identified through reference labs as DNA probe tests. For example:
+    * ALK gene rearrangements (Presence) in Blood or Tissue by FISH ([LOINC 78205-2](https://loinc.org/78205-2/))
 
 * mRNA and protein tumor markers identified through gene expression from Immunohistochemistry (IHC) or In-Situ Hybridization (ISH) tests. For example:
     * Estrogen Receptor (ER)
@@ -147,7 +147,7 @@ Unstructured test reports:
 * All simplified biomarker constructs mapped from a detailed mCODE genomics resource **SHALL** have a reference to that originating resource.
 ##### Biomarker pattern #1: Protein Tumor Marker with Quantitative Value
 
-Map from the mCODE GenomicVariant profile if the biomarker of type [ProteinMarkerTestVS] was part of a mutational analysis from a genomic sequencing test.
+Map from the genomic Variant (or mCODE GenomicVariant) profile if the biomarker of type [ProteinMarkerTestVS] was part of a mutational analysis from a genomic sequencing test.
 
 
 The pattern of translation is as follows:
@@ -199,16 +199,28 @@ Map from the GenomicVariant profile if the biomarker of type [DNATumorMarkerTest
 
 The structural data mapping is as follows:
 
+**for mCODE**
 
 | Biomarker Observation element | Profile Name   | Element Path        | Comments           |
 |-------------------------------|----------------------|---------------------------|--------------------|
 | biomarker-source | TumorMarkerTest    | Specimen.type.coding.displayName |  |
 | biomarker category | GenomicVariant | Observation.category | dna-biomarker |
-| biomarker-name | GenomicVariant | Observation.component:geneStudied.valueCodeableConcept.display | uses the HGNC symbol rather than the code |
+| biomarker-name | GenomicVariant | Observation.component:geneStudied.valueCodeableConcept.display | use the HGNC symbol rather than the code |
 | biomarker-value | TumorMarkerTest | Observation.valueCodeableConcept |  |
 | biomarker-interpretation | GenomicVariant | Observation.component:clinicalSignificance |  |
 {: .grid }
 
+
+**for HL7 CG**
+
+| Biomarker Observation element | Profile Name   | Element Path        | Comments           |
+|-------------------------------|----------------------|---------------------------|--------------------|
+| biomarker-source | Specimen    | Specimen.type.coding.displayName |  |
+| biomarker category | Variant | Observation.category | dna-biomarker |
+| biomarker-name | Variant | Observation.component:gene-studied.valueCodeableConcept.display | use the HGNC symbol rather than the code |
+| biomarker-value | Variant | Observation.valueCodeableConcept |  |
+| biomarker-interpretation | DiagnosticImplication | Observation.component:clinical-significance |  |
+{: .grid }
 
 ##### Biomarker pattern #4: Molecular Tumor Marker from a Genomics Report - DNA Copy Number Alteration
 
@@ -229,7 +241,7 @@ The structural data mapping is as follows:
 | Biomarker source | tumor | 
 | Biomarker category | DNA mutation |
 | Biomarker name | KIT |
-| Biomarker result | mutated |
+| Biomarker result | present |
 | Biomarker interpretation | pathogenic | 
 {: .grid }
 
@@ -260,9 +272,9 @@ The mapping is as follows:
 | Biomarker Element         | Example value              |
 |---------------------------|----------------------------|
 | Biomarker source | tumor | 
-| Biomarker category | RNA fusion analysis |
+| Biomarker category | RNA fusion |
 | Biomarker name | FUS-CHOP |
-| Biomarker result | fusion |
+| Biomarker result | present |
 | Biomarker interpretation | pathogenic |
 {: .grid }
 
