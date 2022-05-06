@@ -8,3 +8,4 @@ Alias:   RXN = http://www.nlm.nih.gov/research/umls/rxnorm
 Alias:   CPT = http://www.ama-assn.org/go/cpt
 Alias:   HGNC = http://www.genenames.org   
 Alias:   HGVS = http://varnomen.hgvs.org
+Alias:   CAP = http://cap.org/eCC
