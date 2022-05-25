@@ -1,5 +1,5 @@
 Instance: testsPerformed
-InstanceOf: Observation
+InstanceOf: TumorMarkerTest
 Usage: #example
 * identifier.system = "https://cap.org/eCC"
 * identifier.value = "Breast.Bmk.169_1.003.001.CTP3_sdcFDF.31159.100004300"
@@ -21,14 +21,13 @@ Usage: #example
 * hasMember[+].identifier.system = "https://cap.org/eCC"
 * hasMember[=].identifier.value = "Breast.Bmk.169_1.003.001.CTP3_sdcFDF#31012.100004300"
 
-Instance: unnamed1
-//Need to double check what parent question this is. It's an error in the parser
-InstanceOf: Observation
+Instance: estrogenReceptor
+InstanceOf: TumorMarkerTest
 Usage: #example
 * identifier.system = "https://cap.org/eCC"
 * identifier.value = "Breast.Bmk.169_1.003.001.CTP3_sdcFDF#26435.100004300"
 * status = #final
-* code = https://cap.org/eCC#26435.100004300
+* code = https://cap.org/eCC#26435.100004300 "Estrogen Receptor (ER) Results"
 * subject = Reference(urn:uuid:95a9ed64-9191-40f5-92bd-656097cd5b16)
 * effectivePeriod.start = "2022-05-16T20:23:31+00:00"
 * performer = Reference(urn:uuid:162802f9-da97-469c-9159-614596b6a87a) "R. Bambrick"
@@ -38,7 +37,7 @@ Usage: #example
 * derivedFrom.identifier.value = "Breast.Bmk.169_1.003.001.CTP3_sdcFDF.31159.100004300"
 
 Instance: testType
-InstanceOf: Observation
+InstanceOf: TumorMarkerTest
 Usage: #example
 * identifier.system = "https://cap.org/eCC"
 * identifier.value = "Breast.Bmk.169_1.003.001.CTP3_sdcFDF#31089.100004300"
@@ -52,13 +51,13 @@ Usage: #example
 * derivedFrom.identifier.system = "https://cap.org/eCC"
 * derivedFrom.identifier.value = "Breast.Bmk.169_1.003.001.CTP3_sdcFDF.31159.100004300"
 
-Instance: undefined
-InstanceOf: Observation
+Instance: progesteroneReceptor
+InstanceOf: TumorMarkerTest
 Usage: #example
 * identifier.system = "https://cap.org/eCC"
 * identifier.value = "Breast.Bmk.169_1.003.001.CTP3_sdcFDF#30524.100004300"
 * status = #final
-* code = https://cap.org/eCC#30524.100004300
+* code = https://cap.org/eCC#30524.100004300 "Progesterone Receptor (PgR) Status"
 * subject = Reference(urn:uuid:381f88d0-1b08-42ab-9b93-6de27d28b5f6)
 * effectivePeriod.start = "2022-05-16T20:23:31+00:00"
 * performer = Reference(urn:uuid:162802f9-da97-469c-9159-614596b6a87a) "R. Bambrick"
@@ -68,12 +67,12 @@ Usage: #example
 * derivedFrom.identifier.value = "Breast.Bmk.169_1.003.001.CTP3_sdcFDF.31159.100004300"
 
 Instance: unnamed2
-InstanceOf: Observation
+InstanceOf: TumorMarkerTest
 Usage: #example
 * identifier.system = "https://cap.org/eCC"
 * identifier.value = "Breast.Bmk.169_1.003.001.CTP3_sdcFDF#31012.100004300"
 * status = #final
-* code = https://cap.org/eCC#31012.100004300
+* code = https://cap.org/eCC#31012.100004300 "HER2 by Immunohistochemistry"
 * subject = Reference(urn:uuid:361c750e-6666-4f35-8f03-42d8bf45fb99)
 * effectivePeriod.start = "2022-05-16T20:23:31+00:00"
 * performer = Reference(urn:uuid:162802f9-da97-469c-9159-614596b6a87a) "R. Bambrick"
@@ -83,7 +82,7 @@ Usage: #example
 * derivedFrom.identifier.value = "Breast.Bmk.169_1.003.001.CTP3_sdcFDF.31159.100004300"
 
 Instance: coldIschemia
-InstanceOf: Observation
+InstanceOf: TumorMarkerTest
 Usage: #example
 * identifier.system = "https://cap.org/eCC"
 * identifier.value = "Breast.Bmk.169_1.003.001.CTP3_sdcFDF#52536.100004300"
@@ -96,7 +95,7 @@ Usage: #example
 * valueCodeableConcept = https://cap.org/eCC#46287.100004300 "Meet requirements specified in latest version of the ASCO / CAP Guidelines"
 
 Instance: fixative
-InstanceOf: Observation
+InstanceOf: TumorMarkerTest
 Usage: #example
 * identifier.system = "https://cap.org/eCC"
 * identifier.value = "Breast.Bmk.169_1.003.001.CTP3_sdcFDF#31086.100004300"
@@ -109,7 +108,7 @@ Usage: #example
 * valueCodeableConcept = https://cap.org/eCC#31087.100004300 "Formalin"
 
 Instance: imageAnalysis
-InstanceOf: Observation
+InstanceOf: TumorMarkerTest
 Usage: #example
 * identifier.system = "https://cap.org/eCC"
 * identifier.value = "Breast.Bmk.169_1.003.001.CTP3_sdcFDF#31128.100004300"
@@ -124,7 +123,7 @@ Usage: #example
 * hasMember.identifier.value = "Breast.Bmk.169_1.003.001.CTP3_sdcFDF.31131.100004300"
 
 Instance: biomarkerScore
-InstanceOf: Observation
+InstanceOf: TumorMarkerTest
 Usage: #example
 * identifier.system = "https://cap.org/eCC"
 * identifier.value = "Breast.Bmk.169_1.003.001.CTP3_sdcFDF.31131.100004300"
@@ -141,7 +140,7 @@ Usage: #example
 * derivedFrom.identifier.value = "Breast.Bmk.169_1.003.001.CTP3_sdcFDF#31128.100004300"
 
 Instance: comments
-InstanceOf: Observation
+InstanceOf: TumorMarkerTest
 Usage: #example
 * identifier.system = "https://cap.org/eCC"
 * identifier.value = "Breast.Bmk.169_1.003.001.CTP3_sdcFDF#31137.100004300"
