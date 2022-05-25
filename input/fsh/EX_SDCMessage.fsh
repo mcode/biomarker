@@ -1,6 +1,7 @@
-Instance: testsPerformed
+Instance: CAPtestsPerformed
 InstanceOf: TumorMarkerTest
 Usage: #example
+Description: "CAP Biomarker template Observation describing the tests which were performed as part of what was observed by the Pathologist's report"
 * identifier.system = "https://cap.org/eCC"
 * identifier.value = "Breast.Bmk.169_1.003.001.CTP3_sdcFDF.31159.100004300"
 * status = #final
@@ -21,9 +22,10 @@ Usage: #example
 * hasMember[+].identifier.system = "https://cap.org/eCC"
 * hasMember[=].identifier.value = "Breast.Bmk.169_1.003.001.CTP3_sdcFDF#31012.100004300"
 
-Instance: estrogenReceptor
+Instance: CAPestrogenReceptor
 InstanceOf: TumorMarkerTest
 Usage: #example
+Description: "CAP Biomarker template Observation describing Estrogen Receptor Results"
 * identifier.system = "https://cap.org/eCC"
 * identifier.value = "Breast.Bmk.169_1.003.001.CTP3_sdcFDF#26435.100004300"
 * status = #final
@@ -36,9 +38,10 @@ Usage: #example
 * derivedFrom.identifier.system = "https://cap.org/eCC"
 * derivedFrom.identifier.value = "Breast.Bmk.169_1.003.001.CTP3_sdcFDF.31159.100004300"
 
-Instance: testType
+Instance: CAPtestType
 InstanceOf: TumorMarkerTest
 Usage: #example
+Description: "CAP Biomarker template Observation describing test type"
 * identifier.system = "https://cap.org/eCC"
 * identifier.value = "Breast.Bmk.169_1.003.001.CTP3_sdcFDF#31089.100004300"
 * status = #final
@@ -51,9 +54,10 @@ Usage: #example
 * derivedFrom.identifier.system = "https://cap.org/eCC"
 * derivedFrom.identifier.value = "Breast.Bmk.169_1.003.001.CTP3_sdcFDF.31159.100004300"
 
-Instance: progesteroneReceptor
+Instance: CAPprogesteroneReceptor
 InstanceOf: TumorMarkerTest
 Usage: #example
+Description: "CAP Biomarker template Observation describing Progesterone Receptor status"
 * identifier.system = "https://cap.org/eCC"
 * identifier.value = "Breast.Bmk.169_1.003.001.CTP3_sdcFDF#30524.100004300"
 * status = #final
@@ -66,9 +70,10 @@ Usage: #example
 * derivedFrom.identifier.system = "https://cap.org/eCC"
 * derivedFrom.identifier.value = "Breast.Bmk.169_1.003.001.CTP3_sdcFDF.31159.100004300"
 
-Instance: unnamed2
+Instance: CAPher2
 InstanceOf: TumorMarkerTest
 Usage: #example
+Description: "CAP Biomarker template Observation describing her2"
 * identifier.system = "https://cap.org/eCC"
 * identifier.value = "Breast.Bmk.169_1.003.001.CTP3_sdcFDF#31012.100004300"
 * status = #final
@@ -81,9 +86,10 @@ Usage: #example
 * derivedFrom.identifier.system = "https://cap.org/eCC"
 * derivedFrom.identifier.value = "Breast.Bmk.169_1.003.001.CTP3_sdcFDF.31159.100004300"
 
-Instance: coldIschemia
+Instance: CAPcoldIschemia
 InstanceOf: TumorMarkerTest
 Usage: #example
+Description: "CAP Biomarker template Observation describing Cold ischemia and fixation times"
 * identifier.system = "https://cap.org/eCC"
 * identifier.value = "Breast.Bmk.169_1.003.001.CTP3_sdcFDF#52536.100004300"
 * status = #final
@@ -94,9 +100,10 @@ Usage: #example
 * performer.type = "Practitioner"
 * valueCodeableConcept = https://cap.org/eCC#46287.100004300 "Meet requirements specified in latest version of the ASCO / CAP Guidelines"
 
-Instance: fixative
+Instance: CAPfixative
 InstanceOf: TumorMarkerTest
 Usage: #example
+Description: "CAP Biomarker template Observation describing the fixative"
 * identifier.system = "https://cap.org/eCC"
 * identifier.value = "Breast.Bmk.169_1.003.001.CTP3_sdcFDF#31086.100004300"
 * status = #final
@@ -107,9 +114,10 @@ Usage: #example
 * performer.type = "Practitioner"
 * valueCodeableConcept = https://cap.org/eCC#31087.100004300 "Formalin"
 
-Instance: imageAnalysis
+Instance: CAPimageAnalysis
 InstanceOf: TumorMarkerTest
 Usage: #example
+Description: "CAP Biomarker template Observation describing the image analysis"
 * identifier.system = "https://cap.org/eCC"
 * identifier.value = "Breast.Bmk.169_1.003.001.CTP3_sdcFDF#31128.100004300"
 * status = #final
@@ -122,26 +130,58 @@ Usage: #example
 * hasMember.identifier.system = "https://cap.org/eCC"
 * hasMember.identifier.value = "Breast.Bmk.169_1.003.001.CTP3_sdcFDF.31131.100004300"
 
-Instance: biomarkerScore
+Instance: CAPbiomarkerScoreER
 InstanceOf: TumorMarkerTest
 Usage: #example
+Description: "CAP Biomarker template Observation describing Image Analysis as part of a group of 3 Observations. This is ER"
 * identifier.system = "https://cap.org/eCC"
-* identifier.value = "Breast.Bmk.169_1.003.001.CTP3_sdcFDF.31131.100004300"
+* identifier.value = "Breast.Bmk.169_1.003.001.CTP3_sdcFDF.31131.100004300_1"
 * status = #final
 * code = https://cap.org/eCC#31131.100004300 "Biomarkers Scored by Image Analysis"
 * subject = Reference(urn:uuid:af5d17b0-3f91-4eb2-be1c-7f0de07dd422)
 * effectivePeriod.start = "2022-05-16T20:23:31+00:00"
 * performer = Reference(urn:uuid:162802f9-da97-469c-9159-614596b6a87a) "R. Bambrick"
 * performer.type = "Practitioner"
-* valueCodeableConcept.coding[0] = https://cap.org/eCC#31132.100004300 "ER"
-* valueCodeableConcept.coding[+] = https://cap.org/eCC#31133.100004300 "PgR"
-* valueCodeableConcept.coding[+] = https://cap.org/eCC#31134.100004300 "HER2 by IHC"
+* valueCodeableConcept.coding = https://cap.org/eCC#31132.100004300 "ER"
 * derivedFrom.identifier.system = "https://cap.org/eCC"
 * derivedFrom.identifier.value = "Breast.Bmk.169_1.003.001.CTP3_sdcFDF#31128.100004300"
 
-Instance: comments
+Instance: CAPbiomarkerScorePgR
 InstanceOf: TumorMarkerTest
 Usage: #example
+Description: "CAP Biomarker template Observation describing Image Analysis as part of a group of 3 Observations. This is PgR"
+* identifier.system = "https://cap.org/eCC"
+* identifier.value = "Breast.Bmk.169_1.003.001.CTP3_sdcFDF.31131.100004300_2"
+* status = #final
+* code = https://cap.org/eCC#31131.100004300 "Biomarkers Scored by Image Analysis"
+* subject = Reference(urn:uuid:af5d17b0-3f91-4eb2-be1c-7f0de07dd422)
+* effectivePeriod.start = "2022-05-16T20:23:31+00:00"
+* performer = Reference(urn:uuid:162802f9-da97-469c-9159-614596b6a87a) "R. Bambrick"
+* performer.type = "Practitioner"
+* valueCodeableConcept.coding = https://cap.org/eCC#31133.100004300 "PgR"
+* derivedFrom.identifier.system = "https://cap.org/eCC"
+* derivedFrom.identifier.value = "Breast.Bmk.169_1.003.001.CTP3_sdcFDF#31128.100004300"
+
+Instance: CAPbiomarkerScoreHER2
+InstanceOf: TumorMarkerTest
+Usage: #example
+Description: "CAP Biomarker template Observation describing Image Analysis as part of a group of 3 Observations. This is HER2"
+* identifier.system = "https://cap.org/eCC"
+* identifier.value = "Breast.Bmk.169_1.003.001.CTP3_sdcFDF.31131.100004300_3"
+* status = #final
+* code = https://cap.org/eCC#31131.100004300 "Biomarkers Scored by Image Analysis"
+* subject = Reference(urn:uuid:af5d17b0-3f91-4eb2-be1c-7f0de07dd422)
+* effectivePeriod.start = "2022-05-16T20:23:31+00:00"
+* performer = Reference(urn:uuid:162802f9-da97-469c-9159-614596b6a87a) "R. Bambrick"
+* performer.type = "Practitioner"
+* valueCodeableConcept.coding = https://cap.org/eCC#31134.100004300 "HER2 by IHC"
+* derivedFrom.identifier.system = "https://cap.org/eCC"
+* derivedFrom.identifier.value = "Breast.Bmk.169_1.003.001.CTP3_sdcFDF#31128.100004300"
+
+Instance: CAPcomments
+InstanceOf: TumorMarkerTest
+Usage: #example
+Description: "CAP Biomarker template Observation showing any comments left as a string by the Pathologist filling out the form"
 * identifier.system = "https://cap.org/eCC"
 * identifier.value = "Breast.Bmk.169_1.003.001.CTP3_sdcFDF#31137.100004300"
 * status = #final

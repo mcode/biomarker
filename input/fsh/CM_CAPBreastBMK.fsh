@@ -1,6 +1,7 @@
 Instance: conceptMapBreaskBMK
 InstanceOf: ConceptMap
 Usage: #definition
+Description: "Example ConceptMap showing how SNOMED Codes may be mapped to CAP eCCs. Note: Draft and example only not for production use, only testing purposes"
 * status = #draft
 * name = "Breast.Bmk"
 * title = "Breast.Bmk"
