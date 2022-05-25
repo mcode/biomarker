@@ -12,6 +12,7 @@ version: 0.1.0
 fhirVersion: 4.0.1
 dependencies: 
   hl7.fhir.uv.genomics-reporting: current
+  hl7.fhir.us.mcode: current
 copyrightYear: 2021+
 releaseLabel: ci-build
 pages:
